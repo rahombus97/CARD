@@ -6,6 +6,8 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="js/modernizr.js"></script> 
+    <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
 </head>
     <body>
         <div class="container2">  
@@ -81,8 +83,13 @@
             
             <div class="settings hidden">
                 <img src="images/rightarrow.png" id="right">
-                <div class="theSettings">Settings here:</div>
-            
+                <ul class="setBar">
+                    <li id="my">My CARDs</li>
+                    <li>Profile</li>
+                    <li>Linked Accounts</li>
+                    <li>Settings</li>
+                </ul>
+              
             
             
             </div>
@@ -98,14 +105,15 @@
                 
                     function(){
                         $(this).animate({
-                            padding: "+=7px",
+                            width: "+=15px",
                             
                             
                                         }, 500);
                     },
                     function(){
                         $(this).animate({
-                            padding: "-=7"});
+                            width: "-=15px",
+                        });
                     }
                 );
                 
@@ -144,7 +152,7 @@
             
                $("#share").click(function(){
                    $(".shareScreen").animate({
-                       marginTop: "-=400px"
+                       marginTop: "-=420px"
                    })
                    $(".shareScreen").removeClass("hidden");
                    
@@ -175,7 +183,9 @@
                 $(".dots").click(function(){
                     $(".settings").animate({
                         marginLeft: "-=400px",  
-                    }, 200).removeClass("hidden");
+                    }, 200).removeClass("hidden")
+                
+                    ;
                 });
                   $("#right").click(function(){
                     $(".settings").animate({
@@ -185,13 +195,19 @@
                     
                 });
                 
+                $(".setBar li").click(function(){
+                        $(".settings").animate({
+                        marginLeft: "+=400px",
+                    },200).addClass("hidden");
+                    });
                 
+                
+                });
            
                    
             
                                    
-            });
-                
+           
           
              
         

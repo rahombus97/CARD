@@ -336,3 +336,29 @@ label{
     height: 50px;
     width: 50px;
 }
+
+.setBar{
+    margin-top: 30px;
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.setBar li{
+    width: 400px;
+    display: block;
+    font-size: 30px;
+    font-family: "Helvetica neue";
+    text-align: center;
+    border-bottom: 2px solid grey;
+    padding: 50px 0px;  
+    cursor: pointer;
+}
+
+#my{
+    border-top: 2px solid grey;
+}
+
+.setBar li:hover{
+   background-color: dimgrey;
+
+}
