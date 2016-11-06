@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Mainpage</title>
+        <link rel="stylesheet" type="text/css" href="css/custom.css"></link>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+</head>
+    <body>
+        <div class="container2">  
+        <div class="loginPage">
+                <img src="images/CardlogoCAPS.png" id="logo">
+                <div id="loginStuff">
+                    <form>
+                        <label for="user">Username:</label>
+                        <input type="email" class="input" id="user" name="user">
+
+                        <label for="pass">Password:</label>
+                        <input type="password" class="input" id="pass" name="pass">
+                    </form>
+
+                    <div id="loginButt">login</div>
+                </div>        
+                  
+        </div>
+            
+    <div class="mainPage hidden">
+         <div class="contentMain">
+            <div class="header">
+                <img src="images/book.png" class="book">
+                <img src="images/CardlogoCAPS.png" class="mainLogo">
+                <img src="images/dots.png" class="dots">
+             </div>
+             <div id="flip">
+                <div class="front"> 
+                <img src="images/refresh-512.png" id="rev">    
+            <img src="images/card_professional.png" id="card" class="card">
+                 </div>   
+                 <div class="back">
+            <img src="images/card_personal.png" class="card">     
+                 
+                 </div>
+                 
+             </div>     
+            <img src="images/button+%20.png" class="button" id="plus">
+            <img src="images/button%20.png" class="button" id="share">
+        </div>    
+            </div>
+        
+    <div class="addressBook hidden">
+        <div class="header">
+                <img src="images/home.png" class="home book">
+                <img src="images/CardlogoCAPS.png" class="mainLogo">
+                <img src="images/dots.png" class="dots">
+         </div>
+        <img src="images/addressbook2.png" id="aBook">
+    </div>
+             
+                <div class="shareScreen hidden">
+                    <img src="images/arrow2.png" id="arrow">
+                        <div id="container">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                        </div>
+                    <div class="sharing">Tap to share your CARD!</div> 
+                    <div class="proPics">
+                        <img src="images/pic1.png" class="pro">
+                        <img src="images/pic2.png" class="pro">
+                        <img src="images/pic3.png" class="pro">
+                    </div>  
+                 
+                    
+                    <ul id="names">
+                        <li>James Smith</li>
+                        <li>Janet Jones</li>
+                        <li>Mike Johnson</li>
+                    </ul>
+
+                </div>
+            
+            <div class="settings hidden">
+                <img src="images/rightarrow.png" id="right">
+                <div class="theSettings">Settings here:</div>
+            
+            
+            
+            </div>
+            
+       
+        
+        </div> 
+        
+        <script>
+            $(document).ready(function(){
+               
+                $("#loginButt").hover(
+                
+                    function(){
+                        $(this).animate({
+                            padding: "+=7px",
+                            
+                            
+                                        }, 500);
+                    },
+                    function(){
+                        $(this).animate({
+                            padding: "-=7"});
+                    }
+                );
+                
+                
+                $("#loginButt").click(
+                
+                    function(){
+                        $(this).animate({
+                            padding: "-=20px", 
+                                        }, 1000);
+                   
+                    });
+                
+                $("#loginButt").click(function login(){
+                    $(".loginPage").fadeOut(700);
+                    $(".mainPage").fadeIn(2500)
+                });
+            
+                
+               $(".button, #arrow").hover(
+                
+                    function(){
+                        $(this).animate({
+                            height: "+=7px",
+                            width: "+=7px",
+                                        });
+                    },
+                    function(){
+                        $(this).animate({
+                            height: "-=7px",
+                            width: "-=7px",
+                        });
+                    }
+                );     
+                   
+            
+               $("#share").click(function(){
+                   $(".shareScreen").animate({
+                       marginTop: "-=400px"
+                   })
+                   $(".shareScreen").removeClass("hidden");
+                   
+               });
+                       
+                $("#arrow").click(function(){
+                       $(".shareScreen").animate({
+                       marginTop: "+=400px",
+                   },100) 
+                    
+                    $(".shareScreen").addClass("hidden");
+                                  });
+            
+                $("#flip").flip()
+                
+                $(".book").click(function(){
+                    $(".mainPage").fadeOut(100);
+                    $(".addressBook").removeClass("hidden");
+                    
+                });
+        
+                $(".home").click(function(){
+                    $(".addressBook").addClass("hidden");
+                    $(".mainPage").fadeIn(1);
+                    
+                });
+                
+                $(".dots").click(function(){
+                    $(".settings").animate({
+                        marginLeft: "-=400px",  
+                    }, 200).removeClass("hidden");
+                });
+                  $("#right").click(function(){
+                    $(".settings").animate({
+                        marginLeft: "+=400px", 
+                    },200)
+                        $(".settings").addClass("hidden");
+                    
+                });
+                
+                
+           
+                   
+            
+                                   
+            });
+                
+          
+             
+        
+        </script>
+</body>
+</html>

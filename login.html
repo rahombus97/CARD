@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Links and Images</title>
+        <link rel="stylesheet" type="text/css" href="css/custom.css"></link>
+    <script src="js/jquery-3.1.1.js"></script>
+</head>
+    <body>
+        <div class="container">
+            
+         <a id="login">
+            <div class="loginbut"></div>
+            </a>
+            
+            <div id="log">
+                <form>
+                    <input class="over" id="user" type="email" name="username">
+                
+                    <input class="over" id="pass" type="password" name="username">
+                </form>
+                <img src="images/login-app_1024.png" class="UI">
+            </div>
+            
+            
+            <img src="images/main_cards3.png" id="main" class="hidden UI">
+           <img src="images/addressbook.png" id="add" class="hidden UI">
+        
+        </div>  
+        
+        <script>
+        $(document).ready(function(){
+            $("#login").click(function(){
+                $("#log").fadeOut(1000);
+                $("#main").fadeIn(2000);           
+            });
+       
+            
+        });     
+            
+ 
+        
+        
+        </script>
+</body>
+</html

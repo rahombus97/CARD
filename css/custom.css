@@ -1,0 +1,338 @@
+
+.container{
+    height: 1136px;
+    width: 640px;
+    margin: 0 auto;
+}
+
+.container2{
+    height: 1136px;
+    width: 640px;
+    margin: 0 auto;
+    background-color: #DDD;
+}
+.card{
+    width: 600px;
+    height: 1030px;
+    position: absolute; 
+    z-index: 2;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+
+#login{
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    margin: 350px 0px 0px 80px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.loginbut{
+    height: 100%;
+}
+
+.over{
+    position: absolute;
+}
+
+#user{
+    margin-top: 0px;
+    
+}
+
+#pass{
+   margin-top: 0px; 
+}
+
+#logo{
+    width: 350px;
+    height: 350px;
+    margin-left: 145px;
+    margin-top: 90px; 
+}
+
+form{
+    width: 250px;
+    margin-left: 190px;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 30px;
+    margin: auto;
+    
+}
+.input{
+    border: none;
+    border-bottom: 2px solid grey;
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+    height: 30px;
+    margin: 70px 0px;
+    background-color: #DDD;
+    margin-top: 20px;
+}
+
+label{
+    font-family: "Helvetica neue";
+    font-weight: bold;
+}
+
+
+#loginButt{
+    background-color: rebeccapurple;
+    color: white;
+    width: 280px;
+    margin: auto;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: "Helvetica neue";
+}
+
+#loginStuff{
+    margin-left: 150px;
+}
+.button{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    z-index: 10;
+    margin-top: 1025px;
+    
+}
+
+.header{
+    width: 640px;
+    height: 80px;
+    border-bottom: 5px solid #AAA;
+    position: absolute;
+}
+#plus{
+    float: right;
+    cursor: pointer;
+}
+
+#share{
+    float: left;
+    cursor: pointer;
+}
+
+.loginPage{
+    position: absolute;
+}
+
+.mainLogo{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 0px;
+}
+.shareScreen{
+    width: 630px;
+    height: 420px;
+    margin-top:1136px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    z-index: 20;
+    border: 5px solid #000;
+}
+
+#container {
+  margin-top: 25px;
+    margin-right: 50px;
+  position: relative;
+  background: #45453f;
+    float:right;
+
+}
+
+.pulse {
+  width: 20px;
+  height: 20px;
+  border: 5px solid blue;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #716f42;
+  z-index: 10;
+  position: absolute;
+    margin-right: 30px;
+}
+
+.dot {
+  border: 10px solid blue;
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 60px;
+  width: 60px;
+  -webkit-animation: pulse 3s ease-out;
+  -moz-animation: pulse 3s ease-out;
+  animation: pulse 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -27px;
+  left: -27px;
+  z-index: 1;
+  opacity: 0;
+    margin-right: 100px;
+}
+
+@-moz-keyframes pulse {
+ 0% {
+    -moz-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -moz-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -moz-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -moz-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -moz-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-webkit-keyframes "pulse" {
+ 0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+#arrow{
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.pro{
+    width: 120px;
+    height: 120px;
+    margin-right: 35px;
+    border: 5px solid black;
+    border-radius: 200px;
+}
+
+.proPics{
+    margin-top: 150px;
+    margin-left: 80px;
+    
+}
+
+#names{
+    list-style-type: none;
+    margin-left: 30px;;
+    position: absolute;
+}
+
+#names li{
+    display: inline;
+    padding-right: 25px;
+    font-size: 25px;
+    font-family: "Helvetica neue";
+}
+
+.sharing{
+    margin-left: 100px;
+    margin-top: 50px;
+    position: absolute;
+    font-size: 40px;
+    font-family: "Helvetica neue";
+}
+
+#rev{
+  width: 70px;
+    height: 70px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 110px;
+    z-index: 21;
+    background-color: grey;
+    background-size: 110px;
+    border-radius: 170px;
+    cursor: pointer;
+}
+
+.book{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.addressBook{
+    position: absolute;
+}
+
+#aBook{
+    height: 1055px;
+    width: 640px;
+    margin-top: 80px;
+}
+
+.dots{
+    float: right;
+    z-index: 21;
+    width: 70px;
+    height: 55px;
+    margin-top: -67px;
+    cursor: pointer;
+}
+
+.settings{
+    height: 1136px;
+    width: 400px;
+    margin-left: 640px;
+    background-color: whitesmoke;
+    z-index: 1000;
+    position: absolute;
+}
+
+#right{
+    height: 50px;
+    width: 50px;
+}
