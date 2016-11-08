@@ -23,10 +23,13 @@
                     </form>
 
                     <div id="loginButt">login</div>
-                </div>        
+                  
+                    <div id="signUp">Not a member? Sign Up!</div>
+                         
+                       
                   
         </div>
-            
+            </div>      
     <div class="mainPage hidden">
          <div class="contentMain">
             <div class="header">
@@ -88,6 +91,7 @@
                     <li>Profile</li>
                     <li>Linked Accounts</li>
                     <li>Settings</li>
+                    <li>Log Out</li>
                 </ul>
               
             
@@ -97,13 +101,13 @@
        
         
         </div> 
-        
-        <script>
-            $(document).ready(function(){
+   
+<script>
+    $(document).ready(function(){
                
-                $("#loginButt").hover(
+        $("#loginButt").hover(
                 
-                    function(){
+                function(){
                         $(this).animate({
                             width: "+=15px",
                             
@@ -118,7 +122,7 @@
                 );
                 
                 
-                $("#loginButt").click(
+         $("#loginButt").click(
                 
                     function(){
                         $(this).animate({
@@ -127,13 +131,13 @@
                    
                     });
                 
-                $("#loginButt").click(function login(){
+        $("#loginButt").click(function login(){
                     $(".loginPage").fadeOut(700);
                     $(".mainPage").fadeIn(2500)
                 });
             
                 
-               $(".button, #arrow").hover(
+        $(".button, #arrow").hover(
                 
                     function(){
                         $(this).animate({
@@ -150,7 +154,7 @@
                 );     
                    
             
-               $("#share").click(function(){
+        $("#share").click(function(){
                    $(".shareScreen").animate({
                        marginTop: "-=420px"
                    })
@@ -158,7 +162,7 @@
                    
                });
                        
-                $("#arrow").click(function(){
+        $("#arrow").click(function(){
                        $(".shareScreen").animate({
                        marginTop: "+=400px",
                    },100) 
@@ -166,28 +170,29 @@
                     $(".shareScreen").addClass("hidden");
                                   });
             
-                $("#flip").flip()
+        $("#flip").flip()
                 
                 $(".book").click(function(){
                     $(".mainPage").fadeOut(100);
-                    $(".addressBook").removeClass("hidden");
+                    
+             $(".addressBook").removeClass("hidden");
                     
                 });
         
-                $(".home").click(function(){
+        $(".home").click(function(){
                     $(".addressBook").addClass("hidden");
                     $(".mainPage").fadeIn(1);
                     
                 });
                 
-                $(".dots").click(function(){
+        $(".dots").click(function(){
                     $(".settings").animate({
                         marginLeft: "-=400px",  
                     }, 200).removeClass("hidden")
                 
                     ;
                 });
-                  $("#right").click(function(){
+         $("#right").click(function(){
                     $(".settings").animate({
                         marginLeft: "+=400px", 
                     },200)
@@ -195,7 +200,7 @@
                     
                 });
                 
-                $(".setBar li").click(function(){
+        $(".setBar li").click(function(){
                         $(".settings").animate({
                         marginLeft: "+=400px",
                     },200).addClass("hidden");
@@ -211,6 +216,6 @@
           
              
         
-        </script>
+</script>
 </body>
 </html>
