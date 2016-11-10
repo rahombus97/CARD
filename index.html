@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Mainpage</title>
+        <title>CARD</title>
         <link rel="stylesheet" type="text/css" href="css/custom.css"></link>
     <script src="js/jquery-3.1.1.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -10,6 +10,9 @@
     <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
 </head>
     <body>
+        <a href="" class="linkSurv">
+        <div class="survey">Leave your comments and opinions here!</div>
+        </a>  
         <div class="container2">  
         <div class="loginPage">
                 <img src="images/CardlogoCAPS.png" id="logo">
@@ -29,7 +32,13 @@
                        
                   
         </div>
-            </div>      
+            </div> 
+        <div class="signUpPage">
+            
+        </div>
+          
+           
+                    
     <div class="mainPage hidden">
          <div class="contentMain">
             <div class="header">
@@ -62,46 +71,57 @@
         <img src="images/addressbook2.png" id="aBook">
     </div>
              
-                <div class="shareScreen hidden">
+        <div class="shareScreen hidden">
                     <img src="images/arrow2.png" id="arrow">
                         <div id="container">
                             <div class="dot"></div>
                             <div class="pulse"></div>
                         </div>
-                    <div class="sharing">Tap to share your CARD!</div> 
+            <div class="sharing">Tap to share your CARD!</div> 
+               
                     <div class="proPics">
-                        <img src="images/pic1.png" class="pro">
-                        <img src="images/pic2.png" class="pro">
-                        <img src="images/pic3.png" class="pro">
+                        <img src="images/pic1.png" class="pro hidden" id="pic1">
+                        <img src="images/pic2.png" class="pro hidden" id="pic2">
+                        <img src="images/pic3.png" class="pro hidden" id="pic3">
                     </div>  
                  
                     
                     <ul id="names">
-                        <li>James Smith</li>
-                        <li>Janet Jones</li>
-                        <li>Mike Johnson</li>
+                        <li class="hidden" id="name1">James Smith</li>
+                        <li class="hidden" id="name2">Janet Jones</li>
+                        <li class="hidden" id="name3">Mike Johnson</li>
                     </ul>
 
-                </div>
+     </div>
             
             <div class="settings hidden">
                 <img src="images/rightarrow.png" id="right">
                 <ul class="setBar">
                     <li id="my">My CARDs</li>
-                    <li>Profile</li>
-                    <li>Linked Accounts</li>
-                    <li>Settings</li>
-                    <li>Log Out</li>
+                    <li id="profile">Profile</li>
+                    <li id="accounts">Linked Accounts</li>
+                    <li id="set">Settings</li>
+                    <li id="out">Log Out</li>
                 </ul>
-              
-            
-            
             </div>
             
-       
+        <div class="profilePage">
+            
+        </div> 
+            
+        <div class="createPage">  
         
         </div> 
-   
+            
+        <div class="linkedPage">
+            
+        </div>   
+            
+        <div class="settingsPage">
+            
+        </div>    
+  
+    </div>   
 <script>
     $(document).ready(function(){
                
@@ -156,9 +176,15 @@
             
         $("#share").click(function(){
                    $(".shareScreen").animate({
-                       marginTop: "-=420px"
+                       marginTop: "-=425px"
                    })
-                   $(".shareScreen").removeClass("hidden");
+                  
+                    $(".shareScreen").removeClass("hidden");
+                    $("#pic1").fadeIn(3000);
+                    $("#pic2").fadeIn(4000);
+                    $("#pic3").fadeIn(5000);
+            
+            
                    
                });
                        
@@ -169,8 +195,9 @@
                     
                     $(".shareScreen").addClass("hidden");
                                   });
-            
-        $("#flip").flip()
+      
+            $("#flip").flip()
+       
                 
                 $(".book").click(function(){
                     $(".mainPage").fadeOut(100);
@@ -188,9 +215,7 @@
         $(".dots").click(function(){
                     $(".settings").animate({
                         marginLeft: "-=400px",  
-                    }, 200).removeClass("hidden")
-                
-                    ;
+                    }, 200).removeClass("hidden");
                 });
          $("#right").click(function(){
                     $(".settings").animate({
@@ -205,7 +230,12 @@
                         marginLeft: "+=400px",
                     },200).addClass("hidden");
                     });
+        
+         $("#out").click(function(){
+                    $(".mainPage, .addressBook").addClass("hidden"), 2000;
+                    $(".loginPage").fadeIn(2500)
                 
+                });       
                 
                 });
            
