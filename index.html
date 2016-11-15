@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
 </head>
     <body>
-        <a href="" class="linkSurv">
+        <a href="https://goo.gl/forms/OiMOp5Eo10UTLTRB3" class="linkSurv">
         <div class="survey">Leave your comments and opinions here!</div>
         </a>  
         <div class="container2">  
@@ -98,15 +98,29 @@
                 <img src="images/rightarrow.png" id="right">
                 <ul class="setBar">
                     <li id="my">My CARDs</li>
-                    <li id="profile">Profile</li>
+                    <li id="profile">My Profile</li>
                     <li id="accounts">Linked Accounts</li>
                     <li id="set">Settings</li>
                     <li id="out">Log Out</li>
                 </ul>
             </div>
             
-        <div class="profilePage">
-            
+        <div class="profilePage hidden">
+            <div class="header">
+                <img src="images/home.png" class="home book">
+                <img src="images/CardlogoCAPS.png" class="mainLogo">
+                <img src="images/dots.png" class="dots">
+         </div>
+        <div class="pageContent">    
+            <img src="images/Katiepic.png" id="profPhoto">
+            <ul id="prof">My Profile:
+                <li>Name: Katie Roberston</li> 
+                <li>Email: karobert@syr.edu</li>
+                <li>Phone Number: 222-2222</li>
+                <li>DOB: 12/25/1996</li>
+                <li>Number of CARDs: 1</li>
+            </ul>
+            </div>    
         </div> 
             
         <div class="createPage">  
@@ -208,6 +222,7 @@
         
         $(".home").click(function(){
                     $(".addressBook").addClass("hidden");
+                    $(".profilePage").addClass("hidden");
                     $(".mainPage").fadeIn(1);
                     
                 });
@@ -232,10 +247,17 @@
                     });
         
          $("#out").click(function(){
-                    $(".mainPage, .addressBook").addClass("hidden"), 2000;
+                    $(".mainPage, .addressBook").fadeOut(1000);
+             
                     $(".loginPage").fadeIn(2500)
                 
-                });       
+                });  
+        $("#profile").click(function(){
+            $(".mainPage").fadeOut(1);
+            $(".profilePage").removeClass("hidden");
+            
+        });
+                 
                 
                 });
            
