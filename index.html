@@ -54,9 +54,9 @@
         <div class="mainPage hidden">
          <div class="contentMain">
             <div class="header">
-                <img src="images/book.png" class="book">
+                <img src="images/addressbook.png" class="book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dots.png" class="dots">
+                <img src="images/dotsbutton.png" class="dots">
              </div>
              <div id="flip">
                 <div class="front"> 
@@ -76,9 +76,9 @@
             </div>        
         <div class="addressBook hidden">
         <div class="header">
-                <img src="images/home.png" class="home book">
+                <img src="images/homebutton.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dots.png" class="dots">
+                <img src="images/dotsbutton.png" class="dots">
          </div>
         <img src="images/addressbook2.png" id="aBook">
     </div>    
@@ -116,9 +116,9 @@
             </div>   
         <div class="profilePage hidden">
             <div class="header">
-                <img src="images/home.png" class="home book">
+                <img src="images/homebutton.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dots.png" class="dots">
+                <img src="images/dotsbutton.png" class="dots">
          </div>
         <div class="pageContent">    
             <img src="images/Katiepic.png" id="profPhoto">
@@ -133,16 +133,23 @@
         </div>   
         <div class="createPage hidden">  
             <div class="header">
-                <img src="images/home.png" class="home book">
+                <img src="images/homebutton.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dots.png" class="dots">
+                <img src="images/dotsbutton.png" class="dots">
+            </div>
+            <div class="editor">
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+                </div>
+
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             </div>
         </div> 
         <div class="linkedPage hidden">
             <div class="header">
-                <img src="images/home.png" class="home book">
+                <img src="images/homebutton.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dots.png" class="dots">
+                <img src="images/dotsbutton.png" class="dots">
             </div>
             <div class="accounts">
             
@@ -151,9 +158,9 @@
         </div>           
         <div class="settingsPage hidden">
             <div class="header">
-                <img src="images/home.png" class="home book">
+                <img src="images/homebutton.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dots.png" class="dots">
+                <img src="images/dotsbutton.png" class="dots">
          </div>
         </div>    
   
@@ -215,7 +222,7 @@
                     }
                 );     
          $("#my").click(function(){
-             $(".addressBook, .profilePage, .linkedPage, .settingsPage").addClass("hidden");
+             $(".addressBook, .profilePage, .linkedPage, .settingsPage, .createPage").fadeOut(1);
              $(".mainPage").fadeIn(1);
          });          
             
@@ -247,13 +254,12 @@
                 $(".book").click(function(){
                     $(".mainPage").fadeOut(100);
                     
-             $(".addressBook").removeClass("hidden");
+             $(".addressBook").fadeIn(1);
                     
                 });
         
         $(".home").click(function(){
-                    $(".addressBook").addClass("hidden");
-                    $(".profilePage").addClass("hidden");
+                    $(".addressBook, .profilePage, .createPage").fadeOut(1);
                     $(".mainPage").fadeIn(1);
                     
                 });
@@ -289,10 +295,26 @@
             
         });
                  
-                
+            $("#plus").click(function(){
+                $(".mainPage").fadeOut("hidden");
+                $(".createPage").fadeIn(1);
+            });    
+
                 });
-           
-                   
+     
+      function allowDrop(ev) {
+    ev.preventDefault();
+} 
+    
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}                 
             
                                    
            

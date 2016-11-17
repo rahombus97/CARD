@@ -344,7 +344,7 @@ label{
     margin-left: 50px;
     margin-top: 110px;
     z-index: 21;
-    background-color: grey;
+    background-color: #AAA;
     background-size: 110px;
     border-radius: 170px;
     cursor: pointer;
@@ -372,10 +372,11 @@ label{
 .dots{
     float: right;
     z-index: 21;
-    width: 70px;
+    width: 30px;
     height: 55px;
     margin-top: -67px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .settings{
@@ -472,3 +473,17 @@ label{
     position: absolute;
 }
 
+#div1, #div2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.editor{
+    margin-top: 100px;
+    position: absolute;
+    
+}
