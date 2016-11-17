@@ -473,12 +473,12 @@ label{
     position: absolute;
 }
 
-#div1, #div2 {
+.div1, .div2 {
     float: left;
-    width: 100px;
-    height: 35px;
+    width: 60px;
+    height: 60px;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid black;
 }
 
@@ -486,4 +486,9 @@ label{
     margin-top: 100px;
     position: absolute;
     
+}
+
+.medImg {
+    width: 60px;
+    height: 60px;
 }
