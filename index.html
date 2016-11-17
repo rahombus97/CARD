@@ -25,7 +25,7 @@
                         <input type="password" class="input" id="pass" name="pass">
                     </form>
 
-                    <div id="loginButt">login</div>
+                    <div class="loginButt">login</div>
                   
                     <div id="signUp">Not a member? Sign Up!</div>
                          
@@ -33,13 +33,25 @@
                   
         </div>
             </div> 
-        <div class="signUpPage">
-            
-        </div>
-          
-           
-                    
-    <div class="mainPage hidden">
+        <div class="signUpPage hidden">
+            <img src="images/CardlogoCAPS.png" id="upLogo">
+            <div class="welcomeTo">Welcome to CARD!</div>
+            <div class="stream">Streamlining your professional and social networks.</div>
+            <form>
+                 <label for="first">First Name:</label>
+                <input type="text" class="input1" id="first" name="first">
+                <label for="last">Last Name:</label>
+                <input type="text" class="input1"id="last" name="last">
+                <label for="user">Username:</label>
+                <input type="text" class="input1" id="user" name="user">
+                <label for="pass">Password:</label>
+                <input type="text" class="input1"id="pass" name="pass">
+                <label for="conPass">Confirm Password:</label>
+                <input type="text" class="input1" id="conPass" name="conPass">
+            </form>
+            <div class="loginButt">sign up</div>
+</div>   
+        <div class="mainPage hidden">
          <div class="contentMain">
             <div class="header">
                 <img src="images/book.png" class="book">
@@ -48,10 +60,11 @@
              </div>
              <div id="flip">
                 <div class="front"> 
-                <img src="images/refresh-512.png" id="rev">    
+                <img src="images/refresh-512.png" class="rev">    
             <img src="images/cardfront_professional.png" id="card" class="card">
                  </div>   
                  <div class="back">
+                <img src="images/refresh-512.png" class="rev">
             <img src="images/cardback_professional-1.png" class="card">     
                  
                  </div>
@@ -60,17 +73,15 @@
             <img src="images/button+%20.png" class="button" id="plus">
             <img src="images/button%20.png" class="button" id="share">
         </div>    
-            </div>
-        
-    <div class="addressBook hidden">
+            </div>        
+        <div class="addressBook hidden">
         <div class="header">
                 <img src="images/home.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
                 <img src="images/dots.png" class="dots">
          </div>
         <img src="images/addressbook2.png" id="aBook">
-    </div>
-             
+    </div>    
         <div class="shareScreen hidden">
                     <img src="images/arrow2.png" id="arrow">
                         <div id="container">
@@ -92,9 +103,8 @@
                         <li class="hidden" id="name3">Mike Johnson</li>
                     </ul>
 
-     </div>
-            
-            <div class="settings hidden">
+     </div>     
+        <div class="settings hidden">
                 <img src="images/rightarrow.png" id="right">
                 <ul class="setBar">
                     <li id="my">My CARDs</li>
@@ -103,8 +113,7 @@
                     <li id="set">Settings</li>
                     <li id="out">Log Out</li>
                 </ul>
-            </div>
-            
+            </div>   
         <div class="profilePage hidden">
             <div class="header">
                 <img src="images/home.png" class="home book">
@@ -121,24 +130,25 @@
                 <li>Number of CARDs: 1</li>
             </ul>
             </div>    
-        </div> 
-            
+        </div>   
         <div class="createPage hidden">  
             <div class="header">
                 <img src="images/home.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
                 <img src="images/dots.png" class="dots">
-         </div>
+            </div>
         </div> 
-            
         <div class="linkedPage hidden">
             <div class="header">
                 <img src="images/home.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
                 <img src="images/dots.png" class="dots">
-         </div>
-        </div>   
+            </div>
+            <div class="accounts">
             
+            </div>
+            
+        </div>           
         <div class="settingsPage hidden">
             <div class="header">
                 <img src="images/home.png" class="home book">
@@ -148,10 +158,11 @@
         </div>    
   
     </div>   
+    <a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=rahombus97.github.io&digit=style/plain/1/&reloads=0" alt="www.reliablecounter.com" title="www.reliablecounter.com" border="0"></a><br /><a href="http://www.analogmix.com" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;" class="counter">AnalogMix.com</a>    
 <script>
     $(document).ready(function(){
                
-        $("#loginButt").hover(
+        $(".loginButt").hover(
                 
                 function(){
                         $(this).animate({
@@ -168,7 +179,7 @@
                 );
                 
                 
-         $("#loginButt").click(
+         $(".loginButt").click(
                 
                     function(){
                         $(this).animate({
@@ -177,11 +188,16 @@
                    
                     });
                 
-        $("#loginButt").click(function login(){
+        $(".loginButt").click(function login(){
                     $(".loginPage").fadeOut(700);
-                    $(".mainPage").fadeIn(2500)
+                    $(".signUpPage").fadeOut(700);
+                    $(".mainPage").fadeIn(2500);
                 });
-            
+        
+         $("#signUp").click(function(){
+             $(".loginPage").fadeOut(700);
+             $(".signUpPage").fadeIn(2500);
+         });   
                 
         $(".button, #arrow").hover(
                 
@@ -216,7 +232,7 @@
                        
         $("#arrow").click(function(){
                        $(".shareScreen").animate({
-                       marginTop: "+=400px",
+                       marginTop: "+=425px",
                    },100) 
                     
                     $(".shareScreen").addClass("hidden");
