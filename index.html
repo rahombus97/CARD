@@ -214,7 +214,10 @@
                         });
                     }
                 );     
-                   
+         $("#my").click(function(){
+             $(".addressBook, .profilePage, .linkedPage, .settingsPage").addClass("hidden");
+             $(".mainPage").fadeIn(1);
+         });          
             
         $("#share").click(function(){
                    $(".shareScreen").animate({
