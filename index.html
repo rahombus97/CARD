@@ -8,6 +8,7 @@
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="js/modernizr.js"></script> 
     <link href='https://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
+    
 </head>
     <body>
         <a href="https://goo.gl/forms/OiMOp5Eo10UTLTRB3" class="linkSurv" target="_blank">
@@ -54,9 +55,9 @@
         <div class="mainPage hidden">
          <div class="contentMain">
             <div class="header">
-                <img src="images/addressbook.png" class="book">
+                <img src="images/addressbook_7fa8d7.png" class="book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dotsbutton.png" class="dots">
+                <img src="images/dotsbutton_7fa8d7.png" class="dots">
              </div>
              <div id="flip">
                 <div class="front"> 
@@ -76,9 +77,9 @@
             </div>        
         <div class="addressBook hidden">
         <div class="header">
-                <img src="images/homebutton.png" class="home book">
+                <img src="images/homebutton_7fa8d7.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dotsbutton.png" class="dots">
+                <img src="images/dotsbutton_7fa8d7.png" class="dots">
          </div>
         <img src="images/addressbook2.png" id="aBook">
     </div>    
@@ -116,9 +117,9 @@
             </div>   
         <div class="profilePage hidden">
             <div class="header">
-                <img src="images/homebutton.png" class="home book">
+                <img src="images/homebutton_7fa8d7.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dotsbutton.png" class="dots">
+                <img src="images/dotsbutton_7fa8d7.png" class="dots">
          </div>
         <div class="pageContent">    
             <img src="images/Katiepic.png" id="profPhoto">
@@ -133,64 +134,96 @@
         </div>   
         <div class="createPage hidden">  
             <div class="header">
-                <img src="images/homebutton.png" class="home book">
+                <img src="images/homebutton_7fa8d7.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dotsbutton.png" class="dots">
+                <img src="images/dotsbutton_7fa8d7.png" class="dots">
+            </div>
+            
+            <div class="yourCARD">
+                <input class="yourPhoto" type='file' onchange="readURL(this);" />
+                <img id="blah" src="#" alt="Upload Photo:"/>
             </div>
             <div class="editor">
+                <div id="sideBar">
                 <div class="media">
-                    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <img src="images/Twitter.png" class="medImg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+                    <div class="div1">
+                        <img src="images/Twitter.png" class="medImg">
                     </div>
                 
                 
-                    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="div2">
                     </div>
                 </div>
                 <div class="media">
-                    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <img src="images/Instagram.png" class="medImg" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+                    <div class="div1">
+                        <img src="images/Instagram.png" class="medImg">
                     </div>
-        
-                
-                    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="div2">
                     </div>
                 </div>
                 <div class="media">
-                    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <img src="images/LinkedIn.png" class="medImg" draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+                    <div class="div1">
+                        <img src="images/LinkedIn.png" class="medImg">
                     </div>
-                    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="div2">
                     </div>
                 </div>  
                 <div class="media">
-                    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <img src="images/Snapchat.png" class="medImg" draggable="true" ondragstart="drag(event)" id="drag4" width="88" height="31">
+                    <div class="div1">
+                        <img src="images/Snapchat.png" class="medImg">
                     </div>
-                    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="div2">
                     </div>
                 </div>   
                 <div class="media">
-                    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <img src="images/fb.png" class="medImg" draggable="true" ondragstart="drag(event)" id="drag5" width="88" height="31">
+                    <div class="div1">
+                        <img src="images/fb.png" class="medImg">
                     </div>
-                    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="div2">
                     </div>
                 </div>
                 <div class="media">
-                    <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <img src="images/youtube.png" class="medImg" draggable="true" ondragstart="drag(event)" id="drag6" width="88" height="31">
+                    <div class="div1">
+                        <img src="images/youtube.png" class="medImg">
                     </div>
-                    <div class="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="div2">
                     </div>
                 </div>
-            </div>
+                <div class="media">
+                    <div class="div1">
+                        <img src="images/googleplus.png" class="medImg">
+                    </div>
+                
+                
+                    <div class="div2">
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="div1">
+                        <img src="images/email.png" class="medImg">
+                    </div>
+                
+                
+                    <div class="div2">
+                    </div>
+                </div> 
+                    <div id="bio">
+                        <label>Enter your summary:</label>
+                        <textarea rows="3" cols="30">
+                        
+                        </textarea>
+                    </div>         
+                </div> 
+                
+                    
+                </div>       
+            
         </div> 
         <div class="linkedPage hidden">
             <div class="header">
-                <img src="images/homebutton.png" class="home book">
+                <img src="images/homebutton_7fa8d7.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dotsbutton.png" class="dots">
+                <img src="images/dotsbutton_7fa8d7.png" class="dots">
             </div>
             <div class="accounts">
             
@@ -199,9 +232,9 @@
         </div>           
         <div class="settingsPage hidden">
             <div class="header">
-                <img src="images/homebutton.png" class="home book">
+                <img src="images/homebutton_7fa8d7.png" class="home book">
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
-                <img src="images/dotsbutton.png" class="dots">
+                <img src="images/dotsbutton_7fa8d7.png" class="dots">
          </div>
         </div>    
   
@@ -239,7 +272,7 @@
         $(".loginButt").click(function login(){
                     $(".loginPage").fadeOut(700);
                     $(".signUpPage").fadeOut(700);
-                    $(".mainPage").fadeIn(2500);
+                    $(".mainPage").fadeIn(1500);
                 });
         
          $("#signUp").click(function(){
@@ -339,24 +372,44 @@
             $("#plus").click(function(){
                 $(".mainPage").fadeOut("hidden");
                 $(".createPage").fadeIn(1);
-            });    
+            }); 
+        
 
-                });
-     
-      function allowDrop(ev) {
-    ev.preventDefault();
-} 
-    
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+        
+        var i = 0;    
+$('.medImg').click(function() { 
+    if (i == 0){        
+        $(this).css({marginLeft: '+=95px'}) 
+        i++; 
+    } else { 
+        $(this).css({marginLeft: '-=95px'}) 
+        i = 0; 
+    }
+});
+        
+        
+            });
+   
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}                 
-            
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+      
+            function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+                
+    }
                                    
            
           
