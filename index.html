@@ -376,19 +376,26 @@
         
 
         
-        var i = 0;    
-$('.medImg').click(function() { 
-    if (i == 0){        
-        $(this).css({marginLeft: '+=95px'}) 
-        i++; 
-    } else { 
-        $(this).css({marginLeft: '-=95px'}) 
-        i = 0; 
-    }
-});
-        
+        var toggle = 0;
+$('.medImg').on('click', function(event) {
+    event.preventDefault();
+    if ( toggle == 1 ){
+        // not clicked
+        $(this).removeClass('clicked');
+        toggle = 2;
+    } else {
+        // clicked
+        $(this).addClass('clicked');
+        toggle = 1;
+    };
+       
+ 
+    
         
             });
+        
+    });
+    
    
      function readURL(input) {
             if (input.files && input.files[0]) {
@@ -412,7 +419,8 @@ $('.medImg').click(function() {
     }
                                    
            
-          
+       
+    
              
         
 </script>
