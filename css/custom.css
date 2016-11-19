@@ -539,3 +539,15 @@ label{
 .clicked{
     margin-left: 95px;
 }
+
+
+.theContent{
+    width: 640px;
+    position: absolute;
+    z-index: 1;
+}
+.theContent1{
+    width: 640px;
+    position: absolute;
+    margin-top: 85px;
+}

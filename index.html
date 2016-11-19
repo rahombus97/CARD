@@ -110,7 +110,6 @@
                 <ul class="setBar">
                     <li id="my">My CARDs</li>
                     <li id="profile">My Profile</li>
-                    <li id="accounts">Linked Accounts</li>
                     <li id="set">Settings</li>
                     <li id="out">Log Out</li>
                 </ul>
@@ -122,14 +121,7 @@
                 <img src="images/dotsbutton_7fa8d7.png" class="dots">
          </div>
         <div class="pageContent">    
-            <img src="images/Katiepic.png" id="profPhoto">
-            <ul id="prof">My Profile:
-                <li>Name: Katie Roberston</li> 
-                <li>Email: karobert@syr.edu</li>
-                <li>Phone Number: 222-2222</li>
-                <li>DOB: 12/25/1996</li>
-                <li>Number of CARDs: 1</li>
-            </ul>
+            <img src="images/cardprofilewline.png" class="theContent">
             </div>    
         </div>   
         <div class="createPage hidden">  
@@ -226,7 +218,7 @@
                 <img src="images/dotsbutton_7fa8d7.png" class="dots">
             </div>
             <div class="accounts">
-            
+                <img src="images/cardsettings.png" class="theContent">
             </div>
             
         </div>           
@@ -236,6 +228,7 @@
                 <img src="images/CardlogoCAPS.png" class="mainLogo">
                 <img src="images/dotsbutton_7fa8d7.png" class="dots">
          </div>
+            <img src="images/cardsettings.png" class="theContent1">
         </div>    
   
     </div>   
@@ -272,7 +265,7 @@
         $(".loginButt").click(function login(){
                     $(".loginPage").fadeOut(700);
                     $(".signUpPage").fadeOut(700);
-                    $(".mainPage").fadeIn(1500);
+                    $(".mainPage").fadeIn(1000);
                 });
         
          $("#signUp").click(function(){
@@ -333,7 +326,7 @@
                 });
         
         $(".home").click(function(){
-                    $(".addressBook, .profilePage, .createPage").fadeOut(1);
+                    $(".addressBook, .profilePage, .createPage, .settingsPage").fadeOut(1);
                     $(".mainPage").fadeIn(1);
                     
                 });
@@ -358,23 +351,26 @@
                     });
         
          $("#out").click(function(){
-                    $(".mainPage, .addressBook").fadeOut(1000);
+                    $(".mainPage, .addressBook, .createPage, .settingsPage").fadeOut(1000);
              
                     $(".loginPage").fadeIn(2500)
                 
                 });  
         $("#profile").click(function(){
-            $(".mainPage").fadeOut(1);
-            $(".profilePage").removeClass("hidden");
+            $(".mainPage, .createPage, .addressBook, .settingsPage").fadeOut(1);
+            $(".profilePage").fadeIn(1);
             
         });
                  
             $("#plus").click(function(){
-                $(".mainPage").fadeOut("hidden");
+                $(".mainPage").fadeOut(1);
                 $(".createPage").fadeIn(1);
             }); 
         
-
+        $("#set").click(function(){
+            $(".mainPage, .createPage, .addressBook, .profilePage").fadeOut(1);
+            $(".settingsPage").fadeIn(1)
+        });
         
         var toggle = 0;
 $('.medImg').on('click', function(event) {
