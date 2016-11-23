@@ -388,7 +388,7 @@
             $(".mainPage, .createPage, .addressBook, .profilePage").fadeOut(1);
             $(".settingsPage").fadeIn(1)
         });
-        
+    /*    
         var toggle = 0;
 $('.medImg').on('click', function(event) {
     event.preventDefault();
@@ -403,7 +403,11 @@ $('.medImg').on('click', function(event) {
     };
         
             });
+        */
         
+        $(".medImg").click(function(){
+            $(this).addClass("add");
+        });
        
         $(".theButton").click(function(){
             event.preventDefault();
