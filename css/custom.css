@@ -531,9 +531,11 @@ label{
 
 #bio{
     position: absolute;
-    margin-left: 220px;
-    margin-top: 600px;
+    margin-left: 270px;
+    margin-top: 400px;
     font-size: 30px;
+    font-family: "Helvetica neue";
+    font-weight: bold;
 }
 
 .clicked{
@@ -550,4 +552,61 @@ label{
     width: 640px;
     position: absolute;
     margin-top: 85px;
+}
+
+.yourInput{
+    margin-top: -200px;
+    position: absolute;
+    margin-left: -50px;
+}
+
+
+#display{
+    margin-top: 690px;
+    margin-left: 280px;
+    position: absolute;
+    width: 370px;
+    font-size: 30px;
+    word-wrap: break-word;
+}
+
+#display2{
+    margin-top: 780px;
+    margin-left: 300px;
+    width: 300px;
+    position: absolute;
+    display: inline;
+    overflow:overlay;
+    word-wrap: break-word;
+    font-size: 24px;
+    
+}
+
+#user2{
+    position: absolute;
+    height: 70px;
+    width: 200px;
+    margin-left: -177px;
+    margin-top: 50px;
+    
+}
+.theButton{
+    margin-top: 50px;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 130px;
+    height: 50px;
+    width: 200px;
+    background-color: #7fa8d7;
+    margin-left: 22px;
+    border-radius: 15px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.info{
+    position: absolute;
+    font-family: "Helvetica neue";
+    font-weight: bold;
+    color: #CCC;
+    
 }

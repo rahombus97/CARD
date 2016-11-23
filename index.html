@@ -199,12 +199,22 @@
                     <div class="div2">
                     </div>
                 </div> 
-                    <div id="bio">
-                        <label>Enter your summary:</label>
-                        <textarea rows="3" cols="30">
+                    <div>
+                        <form id="bio">
+                            <label for="firstName">Name:</label>
+                            <input type="text" name="firstName" id="user_input">
+                        <label for="summary">Summary:</label>
+                            
+                            <textarea id="user2" name="summary"></textarea>
+                            
+                            <div class="theButton" onclick="showInput();" id="submit" value="Submit">Submit</div>
+                        </form>  
                         
-                        </textarea>
-                    </div>         
+                    </div>  
+                    <div class="yourInput">
+                            <div id="display" class="info"></div>
+                            <div id="display2" class="info"></div>
+                        </div>
                 </div> 
                 
                     
@@ -289,7 +299,7 @@
                     }
                 );     
          $("#my").click(function(){
-             $(".addressBook, .profilePage, .linkedPage, .settingsPage, .createPage").fadeOut(1);
+             $(".addressBook, .profilePage, .settingsPage, .createPage").fadeOut(1);
              $(".mainPage").fadeIn(1);
          });          
             
@@ -390,6 +400,13 @@ $('.medImg').on('click', function(event) {
         
             });
         
+       
+        $(".theButton").click(function(){
+            event.preventDefault();
+            $("#bio").fadeOut(1);
+            
+        });
+        
     });
     
    
@@ -411,10 +428,13 @@ $('.medImg').on('click', function(event) {
             function showInput() {
         document.getElementById('display').innerHTML = 
                     document.getElementById("user_input").value;
+        document.getElementById('display2').innerHTML = 
+                    document.getElementById("user2").value;        
+              
+                
                 
     }
-                                   
-           
+   
        
     
              
