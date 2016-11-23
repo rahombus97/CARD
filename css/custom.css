@@ -607,6 +607,40 @@ label{
     position: absolute;
     font-family: "Helvetica neue";
     font-weight: bold;
-    color: #CCC;
-    
+    color: #CCC;  
+}
+
+.colors{
+    position: absolute;
+    width: 640px;
+    height: 100px;
+    margin-top: 910px;
+}
+.colorButt{
+    width: 70px;
+    height: 70px;
+    display:inline-block;
+    margin: 0px 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#grey{
+    background-color: #666;
+}
+
+#blue{
+    background-color: dodgerblue;
+}
+
+#green{
+    background-color: forestgreen;
+}
+
+#red{
+    background-color: orangered;
+}
+
+#purple{
+    background-color: rebeccapurple;
 }

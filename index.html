@@ -216,7 +216,14 @@
                             <div id="display2" class="info"></div>
                         </div>
                 </div> 
-                
+                    <div class="colors">
+                        <div class="colorButt" id="grey"></div>
+                        <div class="colorButt" id="blue"></div>
+                        <div class="colorButt" id="green"></div>
+                        <div class="colorButt" id="red"></div>
+                        <div class="colorButt" id="purple"></div>
+                    
+                    </div>
                     
                 </div>       
             
@@ -394,9 +401,6 @@ $('.medImg').on('click', function(event) {
         $(this).addClass('clicked');
         toggle = 1;
     };
-       
- 
-    
         
             });
         
@@ -406,6 +410,33 @@ $('.medImg').on('click', function(event) {
             $("#bio").fadeOut(1);
             
         });
+        
+        $("#grey").click(function(){
+            $(".yourCARD").css({
+                            backgroundColor: "#666",
+                                        },1);
+        });
+        $("#blue").click(function(){
+            $(".yourCARD").css({
+                            backgroundColor: "dodgerblue",
+                                        },1);
+        });
+        $("#green").click(function(){
+            $(".yourCARD").css({
+                            backgroundColor: "forestgreen",
+                                        },1);
+        });
+        $("#red").click(function(){
+            $(".yourCARD").css({
+                            backgroundColor: "orangered",
+                                        },1);
+        });
+        $("#purple").click(function(){
+            $(".yourCARD").css({
+                            backgroundColor: "rebeccapurple",
+                                        },1);
+        });
+                         
         
     });
     
